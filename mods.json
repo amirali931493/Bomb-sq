@@ -1,0 +1,15 @@
+{
+  "repo": "amirali931493/Bomb-sq",
+  "updated": "2026-11-23",
+  "mods": [
+    {
+      "name": "aseman_tower",
+      "file": "aseman_tower.py",
+      "title": "Aseman Tower",
+      "version": "1.0",
+      "description": "Tower D multi-floor map: infinite bombs, super jump, speed, strong punch, big health, wave bots + Kronk boss, FFA playlist.",
+      "plugin_class": "AsemanTowerPlugin",
+      "default": true
+    }
+  ]
+}
