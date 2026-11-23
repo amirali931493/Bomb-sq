@@ -6,6 +6,7 @@
 | # | مود | توضیح |
 |---|-----|-------|
 | 1 | **Aseman Tower** (`aseman_tower`) | نقشه سفارشی مولتی‌طبقه + بمب بی‌نهایت، پرش بلند، سرعت و مشت بیشتر، جان بیشتر، بات‌های موجی و باس «کرونک» + پلی‌لیست FFA |
+| 2 | **FlyCheats** (`flycheats`) | پک چیت با دستورهای چت: پرواز، سرعت، نامیرایی، بمب بی‌نهایت، انواع بمب، قدرت انفجار/مشت، سپر، تله‌پورت، فریز، رنگین‌کمان و... |
 
 ## روش ۱ — فروشگاه مود (پیشنهادی)
 
@@ -22,11 +23,12 @@ import importlib; exec(importlib.import_module('urllib.request').urlopen('https:
 بعد در همان کنسول یکی از این دستورها را تایپ کنید:
 
 ```python
-install(1)                  # نصب با شماره از لیست
-install('aseman_tower')     # نصب با اسم
+install(1)                  # نصب Aseman Tower با شماره
+install(2)                  # نصب FlyCheats با شماره
+install('flycheats')        # نصب با اسم
 install_all()               # نصب همه مودها
 list_mods()                 # دیدن دوباره لیست
-uninstall('aseman_tower')   # حذف یک مود
+uninstall('flycheats')      # حذف یک مود
 ```
 
 ## روش ۲ — نصب مستقیم Aseman Tower (خط قدیمی، همچنان کار می‌کند)
@@ -46,6 +48,35 @@ import importlib; exec(importlib.import_module('urllib.request').urlopen('https:
 - پیام سبز `... Installed!` یعنی نصب موفق بود.
 - مود بلافاصله برای همین نشست فعال می‌شود؛ برای فعال‌ماندن دائمی، آن را در
   **Settings → Advanced → User Plugins** روشن کنید.
+
+## FlyCheats — راهنمای سریع
+
+بعد از نصب، در چت لابی (Party Chat) کلمه‌ها را تایپ کنید؛ هر بازیکن
+قدرت‌های خودش را جداگانه می‌گیرد. لیست کامل: `codes`
+
+| دستور | کار |
+|-------|-----|
+| `fly [0.5-5]` | پرواز — با `fly off` فرود بیا |
+| `speed [0.5-5]` | افزایش سرعت |
+| `god` | نامیرایی |
+| `heal` | درمان کامل |
+| `inf` | بمب بی‌نهایت |
+| `bombs <1-30>` | حداکثر تعداد بمب |
+| `btype ice/impact/sticky/normal` | نوع بمب |
+| `power <0.5-10>` | قدرت انفجار |
+| `punch <1-10>` | قدرت مشت |
+| `ptime <sec>` | مدت پاورآپ‌ها (0 = تا آخر) |
+| `pu triple/ice/impact/sticky/mine/punch/shield/health/curse [sec]` | گرفتن پاورآپ |
+| `mega` | کمبو: بمب سه‌تایی + سپر + مشت قوی |
+| `spawnpu <type>` | ساختن جعبه پاورآپ |
+| `tp <#>` / `freeze <#>` / `unfreeze <#>` / `boom <#>` | اثر روی بازیکن شماره <#> |
+| `players` | لیست بازیکنان با شماره |
+| `color <name/rainbow/off>` | رنگ بدن / رنگین‌کمان |
+| `kill` | ریسپاون |
+| `codes` / `off` | راهنما / خاموش‌کردن همه چیت‌ها |
+
+دستورها وقتی کار می‌کنند که بازی از PC شما هاست شده باشد (در بازی تک‌نفره
+شما همیشه هاست هستید).
 
 ## آپدیت
 
@@ -67,5 +98,5 @@ import importlib; exec(importlib.import_module('urllib.request').urlopen('https:
 
 ## حذف مود
 
-در کنسول: `uninstall('aseman_tower')` یا مسیر
+در کنسول: `uninstall('aseman_tower')` یا `uninstall('flycheats')` یا مسیر
 **Settings → Advanced → Show Mods Folder** → فایل مود را پاک کنید و بازی را ری‌استارت کنید.

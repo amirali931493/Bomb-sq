@@ -10,6 +10,14 @@
       "description": "Tower D multi-floor map: infinite bombs, super jump, speed, strong punch, big health, wave bots + Kronk boss, FFA playlist.",
       "plugin_class": "AsemanTowerPlugin",
       "default": true
+    },
+    {
+      "name": "flycheats",
+      "file": "FlyCheats.py",
+      "title": "FlyCheats",
+      "version": "1.0",
+      "description": "Chat-command cheat pack: fly, speed, god, infinite bombs, bomb types, blast/punch power, shield, mega combo, tp, freeze, boom, rainbow color.",
+      "plugin_class": "FlyCheatsPlugin"
     }
   ]
 }

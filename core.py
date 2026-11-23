@@ -68,7 +68,10 @@ def _find(mod):
             print('ERROR: index out of range (1-' + str(len(mods)) + '). Run list_mods() first.')
             return None
         return mods[mod - 1]
-    entry = next((m for m in mods if m.get('name') == mod), None)
+    entry = next(
+        (m for m in mods if str(m.get('name', '')).lower() == str(mod).lower()),
+        None,
+    )
     if entry is None:
         print('ERROR: mod "' + str(mod) + '" not found. Run list_mods() to see the menu.')
     return entry
