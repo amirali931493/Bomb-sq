@@ -18,6 +18,30 @@
       "version": "1.0",
       "description": "Chat-command cheat pack: fly, speed, god, infinite bombs, bomb types, blast/punch power, shield, mega combo, tp, freeze, boom, rainbow color.",
       "plugin_class": "FlyCheatsPlugin"
+    },
+    {
+      "name": "xp_system",
+      "file": "xp_system.py",
+      "title": "XP System",
+      "version": "1.0",
+      "description": "Kill players or bots to earn XP and level up from Rookie to BombSquad God. Progress saved between sessions. Chat: xp / top / xphelp.",
+      "plugin_class": "XPSystemPlugin"
+    },
+    {
+      "name": "shop_system",
+      "file": "shop_system.py",
+      "title": "Shop System",
+      "version": "1.0",
+      "description": "Earn coins for every kill and spend them in chat: buy shield, ice/impact/sticky/triple bombs, mines, heal and more. Chat: shop / buy / coins.",
+      "plugin_class": "ShopSystemPlugin"
+    },
+    {
+      "name": "kill_effects",
+      "file": "kill_effects.py",
+      "title": "Kill Effects",
+      "version": "1.0",
+      "description": "Pick a special effect for your own deaths: triple explosion, rainbow flash, lightning strike or fireworks show. Chat: killfx <name>.",
+      "plugin_class": "KillEffectsPlugin"
     }
   ]
 }

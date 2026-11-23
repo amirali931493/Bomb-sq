@@ -7,6 +7,9 @@
 |---|-----|-------|
 | 1 | **Aseman Tower** (`aseman_tower`) | نقشه سفارشی مولتی‌طبقه + بمب بی‌نهایت، پرش بلند، سرعت و مشت بیشتر، جان بیشتر، بات‌های موجی و باس «کرونک» + پلی‌لیست FFA |
 | 2 | **FlyCheats** (`flycheats`) | پک چیت با دستورهای چت: پرواز، سرعت، نامیرایی، بمب بی‌نهایت، انواع بمب، قدرت انفجار/مشت، سپر، تله‌پورت، فریز، رنگین‌کمان و... |
+| 3 | **XP System** (`xp_system`) | با کشتن XP و لول بگیر (Rookie تا BombSquad God)، تابلو برترین‌ها، ذخیره دائمی پیشرفت |
+| 4 | **Shop System** (`shop_system`) | با هر کشتن سکه بگیر و در چت خرید کن: سپر، بمب یخی/سه‌تایی/چسبنده/ضربه‌ای، مین، درمان |
+| 5 | **Kill Effects** (`kill_effects`) | افکت مرگ اختصاصی: انفجار سه‌گانه، رنگین‌کمان، صاعقه یا آتش‌بازی |
 
 ## روش ۱ — فروشگاه مود (پیشنهادی)
 
@@ -25,7 +28,9 @@ import importlib; exec(importlib.import_module('urllib.request').urlopen('https:
 ```python
 install(1)                  # نصب Aseman Tower با شماره
 install(2)                  # نصب FlyCheats با شماره
-install('flycheats')        # نصب با اسم
+install(3)                  # نصب XP System
+install(4)                  # نصب Shop System
+install(5)                  # نصب Kill Effects
 install_all()               # نصب همه مودها
 list_mods()                 # دیدن دوباره لیست
 uninstall('flycheats')      # حذف یک مود
@@ -44,6 +49,8 @@ import importlib; exec(importlib.import_module('urllib.request').urlopen('https:
 ```python
 import importlib; exec(importlib.import_module('urllib.request').urlopen('https://raw.githubusercontent.com/amirali931493/Bomb-sq/main/core.py').read()); install('NAME_MOD')
 ```
+
+اسم‌های معتبر: `aseman_tower` ، `flycheats` ، `xp_system` ، `shop_system` ، `kill_effects`
 
 - پیام سبز `... Installed!` یعنی نصب موفق بود.
 - مود بلافاصله برای همین نشست فعال می‌شود؛ برای فعال‌ماندن دائمی، آن را در
@@ -78,6 +85,62 @@ import importlib; exec(importlib.import_module('urllib.request').urlopen('https:
 دستورها وقتی کار می‌کنند که بازی از PC شما هاست شده باشد (در بازی تک‌نفره
 شما همیشه هاست هستید).
 
+## XP System — راهنمای سریع
+
+با هر کشتن (بازیکن یا بات) **+۱۰ XP** می‌گیری، با مُردن **-۲** و با
+کشتین پشت‌سرهم (کمتر از ۳ ثانیه فاصله) **+۵ بونس**. کشتن به کسی داده
+می‌شود که در ۵ ثانیهٔ آخر به قربانی ضربه زده — دقیقاً مثل خود بازی.
+پیشرفت در فایل `bs_xp_data.json` کنار مودها ذخیره می‌شود و با ری‌استارت
+از بین نمی‌رود.
+
+| دستور | کار |
+|-------|-----|
+| `xp` | لول، XP، نوار پیشرفت و آمار کشتار تو |
+| `top` | ۵ نفر برتر بر اساس XP |
+| `xphelp` | راهنما |
+
+لول‌ها: Rookie → Fighter (3) → Warrior (6) → Elite (10) → Master (15) →
+Legend (20) → **BombSquad God** (30). لول گرفتن با پیام طلایی برای همه
+اعلام می‌شود.
+
+## Shop System — راهنمای سریع
+
+با هر کشتن **+۵ سکه** می‌گیری. بازیکن جدید **۲۰ سکه** هدیه می‌گیرد.
+موجودی در `bs_shop_data.json` ذخیره می‌شود.
+
+| دستور | کار |
+|-------|-----|
+| `shop` | لیست اجناس و قیمت‌ها |
+| `buy <item>` | خرید (باید زنده باشی) |
+| `coins` | موجودی سکه‌ات |
+
+| جنس | قیمت | اثر |
+|-----|------|-----|
+| `heal` | 15c | جان کامل |
+| `shield` | 30c | سپر انرژی |
+| `ice` | 25c | بمب یخی |
+| `impact` | 25c | بمب ضربه‌ای |
+| `sticky` | 25c | بمب چسبنده |
+| `triple` | 35c | بمب سه‌تایی |
+| `mine` | 30c | سه مین |
+| `curse` | 5c | ؟؟؟ (خیر سرت!) |
+
+خریدها تا مرگ بعدی باقی می‌مانند (مثل پاورآپ‌های خود بازی).
+
+## Kill Effects — راهنمای سریع
+
+افکت مرگِ خودت را انتخاب کن؛ هر وقت مُردی، افکت سر جای جسدت اجرا می‌شود
+و بقیه هم می‌بینند:
+
+| دستور | افکت |
+|-------|------|
+| `killfx explosion` | انفجار زنجیره‌ای سه‌مرحله‌ای (می‌سوزد! مواظب اطرافیان باش) |
+| `killfx rainbow` | نمایش ۷ رنگ رنگین‌کمان روی جسدت |
+| `killfx lightning` | صاعقه با فلش آسمان و جرقه |
+| `killfx fireworks` | ۶ شات آتش‌بازی بالای جسدت + شات آخر |
+| `killfx off` | خاموش — مرگ معمولی |
+| `killfx` | دیدن افکت فعلی |
+
 ## آپدیت
 
 هر بار اجرای همان یک‌خط، آخرین نسخه را از گیت‌هاب نصب می‌کند.
@@ -95,6 +158,12 @@ import importlib; exec(importlib.import_module('urllib.request').urlopen('https:
 
 مقادیر داخل دیکشنری `CONFIG` در ابتدای `aseman_tower.py`:
 جان بازیکن، قدرت مشت، تعداد بات‌ها، زمان آمدن باس و...
+
+## تنظیمات مودهای جدید
+
+- **XP System**: اعداد `XP_PER_KILL`، `LEVEL_BASE` و... در ابتدای `xp_system.py`
+- **Shop System**: قیمت‌ها در دیکشنری `SHOP_ITEMS` و `COINS_PER_KILL` در `shop_system.py`
+- **Kill Effects**: افکت‌ها در توابع `_fx_*` داخل `kill_effects.py`
 
 ## حذف مود
 
